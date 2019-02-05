@@ -12,32 +12,52 @@ import java.util.Scanner;
  * @author doanxuanquyet
  */
 enum Sex {
-    NAM, NU, KHONG_XAC_DINH;
+    NAM(1, "nam"), NU(0, "nu"), KHONG_XAC_DINH(-1, "less");
+
+    private int ma;
+    private String mota;
+
+    private Sex(int ma, String mota) {
+        this.ma = ma;
+        this.mota = mota;
+    }
+
+    public int getMa() {
+        return ma;
+    }
+
+    public void setMa(int ma) {
+        this.ma = ma;
+    }
+
+    public String getMota() {
+        return mota;
+    }
+
+    public void setMota(String mota) {
+        this.mota = mota;
+    }
 
     //lay thong tin gioi tinh
     public static String getSex(Sex sex) {
         String sexName;
         switch (sex) {
             case NAM:
-                sexName = "nam";
-                break;
+                return NAM.getMota();
             case NU:
-                sexName = "nu";
-                break;
+                return NU.getMota();
             default:
-                sexName = "khong xac dinh";
+                return KHONG_XAC_DINH.getMota();
         }
-
-        return sexName;
     }
 
     // nhap gioi tinh nam : 1 , nu : 2 , less : 0
     public static Sex inPut() {
-        System.out.println("Sex [nam : 1, nu : 0, less : 2] -->\t");
+        System.out.println("Sex [nam : 1, nu : 0, less : -1] -->\t");
         switch (new Scanner(System.in).nextInt()) {
             case 1:
                 return Sex.NAM;
-            case 2:
+            case 0:
                 return Sex.NU;
             default:
                 return Sex.KHONG_XAC_DINH;
