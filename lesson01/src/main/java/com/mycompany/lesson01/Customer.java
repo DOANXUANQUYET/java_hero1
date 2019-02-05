@@ -38,11 +38,10 @@ public class Customer {
             System.out.print("name -->");
             this.name = new Scanner(System.in).nextLine();
             
-            System.out.println("birthday (date,month,year) : ");
-            int date = new Scanner(System.in).nextInt();
-            int month = new Scanner(System.in).nextInt();
-            int year = new Scanner(System.in).nextInt();
-            this.birthday = new Birthday(date, month, year);
+            if(this.birthday == null){
+                this.birthday = new Birthday();
+            }
+            this.birthday.inPut();
                   
     }
     
@@ -50,39 +49,16 @@ public class Customer {
         System.out.println("student information : ");
         System.out.println("svCode : " + this.svCode);
         System.out.println("name : " + this.name);
-        System.out.println("birthday[date/month/year] : " + this.birthday.getNgay() +"/" + this.birthday.getThang() + "/" + this.birthday.getNam());
-        
-        
+       if(this.birthday == null){
+           this.birthday = new Birthday();
+       }
+       this.birthday.outPut();
     }
     
+    //ham so sanh ngay cua 2 customer
     public int compareBirthday(Customer custom){
-        int check = 0;
-        if(this.birthday.getNam() < custom.birthday.getNam()){
-            check = -1;
-        }
-        else if(this.birthday.getNam() > custom.birthday.getNam()){
-            check = 1;
-        }
-        else{
-            if(this.birthday.getThang()< custom.birthday.getThang()){
-                check = -1;
-            }
-            else if(this.birthday.getThang()> custom.birthday.getThang()){
-                check = 1;
-            }
-            else{
-                    if(this.birthday.getNgay()< custom.birthday.getNgay()){
-                        check = -1;
-                    }
-                    else if(this.birthday.getNgay() > custom.birthday.getNgay()){
-                        check = 1;
-                    }
-            }
-        }
-        
-        return  check;
-            
-        
+        int check = this.birthday.compareDate(custom.getBirthday());    
+        return check;
     }
 
     public String getSvCode() {
