@@ -1,0 +1,9 @@
+Bài tập 3:
+Xây dựng chương trình quản lí học sinh tren console với các tính năng sau:
+Nhân viên có các thuộc tính sau: Mã(int , tự tăng) ,  Tên nhân viên(String) , Giới tính ( enum, 1 = nam, 0 = nu, -1 = không xác định)
+Nhập danh sách nhân viên ( Nhập số lượng, nhập dữ liệu cho từng nhân viên)
+Hiện nhân viên đã có trong hệ thống
+Tìm nhân viên theo giới tính và sắp xếp kết quả theo tên
+(giới tính được chọn từ bàn phím có các giá trị : 1 -> nam, 0 -> nu, -1 -> không xác định)
+4. Thoát
+Xây dựng chương trình thành menu, sau khi chọn 1 trong các chức năng thì sẽ quay trở lại để chọn chức năng tiếp theo trừ thoát

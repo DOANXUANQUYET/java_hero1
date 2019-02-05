@@ -1,0 +1,4 @@
+Bài tập 1:
+Tạo đối lớp khách hàng gồm có : Mã (int), Tên(String), Ngày sinh (lớp -> ngày , tháng , năm)
+Nhập và Xuất thông tin khách hàng
+So sánh tuổi
