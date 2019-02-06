@@ -21,6 +21,10 @@ enum Sex {
         this.ma = ma;
         this.mota = mota;
     }
+    
+    private  Sex(){
+        
+    }
 
     public int getMa() {
         return ma;

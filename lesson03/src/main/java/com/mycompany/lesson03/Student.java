@@ -21,13 +21,6 @@ public class Student {
     public static int MASINHVIEN = 0;
 
     //set and get
-    public int getMaSV() {
-        return maSV;
-    }
-
-    public void setMaSV(int maSV) {
-        this.maSV = maSV;
-    }
 
     public String getName() {
         return name;
