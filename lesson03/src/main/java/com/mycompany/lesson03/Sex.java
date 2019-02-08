@@ -42,19 +42,6 @@ enum Sex {
         this.mota = mota;
     }
 
-    //lay thong tin gioi tinh
-    public static String getSex(Sex sex) {
-        String sexName;
-        switch (sex) {
-            case NAM:
-                return NAM.getMota();
-            case NU:
-                return NU.getMota();
-            default:
-                return KHONG_XAC_DINH.getMota();
-        }
-    }
-
     // nhap gioi tinh nam : 1 , nu : 2 , less : 0
     public static Sex inPut() {
         System.out.println("Sex [nam : 1, nu : 0, less : -1] -->\t");

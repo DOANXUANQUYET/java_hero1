@@ -71,6 +71,7 @@ public class StudentIT extends Student {
 
     @Override
     public void inPut() {
+        this.setSex(Sex.inputSex());
         System.out.print("html score -->\t");
         this.html = new Scanner(System.in).nextDouble();
         System.out.print("css score -->\t");

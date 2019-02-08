@@ -10,35 +10,45 @@ package com.mycompany.lesson04;
  * @author doanxuanquyet
  */
 public abstract class Student {
-    
+
+    //tao ma sv tu dong tang
     public static int CODESTUDENT = 0;
     private int codeStudent;
     private String name;
     private String subject;
+    private Sex sex;
 
     //create construction
     public Student(String name, String subject) {
         this.name = name;
         this.subject = subject;
     }
-    
+
     public Student() {
-        
+
     }
 
     //get and set
+    public Sex getSex() {
+        return sex;
+    }
+
+    public void setSex(Sex sex) {
+        this.sex = sex;
+    }
+
     public String getName() {
         return name;
     }
-    
+
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public String getSubject() {
         return subject;
     }
-    
+
     public void setSubject(String subject) {
         this.subject = subject;
     }
@@ -50,11 +60,10 @@ public abstract class Student {
     public void setCodeStudent(int codeStudent) {
         this.codeStudent = codeStudent;
     }
-    
-    
 
     //lay diem
     public abstract double getScore();
+
     //function nhap du lieu
     public abstract void inPut();
 
@@ -66,7 +75,7 @@ public abstract class Student {
     //function xet hoc luc
     public String getAbility(double score) {
         String ability;
-        
+
         if (score >= 9) {
             ability = "Xuat sac";
         } else if (score >= 7.5) {
@@ -78,14 +87,14 @@ public abstract class Student {
         } else {
             ability = "Yeu";
         }
-        
+
         return ability;
     }
 
     //viet lai ham toString
     @Override
     public String toString() {
-        return "\t name : " + this.name + " \t subject : " + this.subject + "\t \t diem : "+this.getScore()+" \t ability : " + this.getAbility(this.getScore());
+        return "\t name : " + this.name + "\t Gioi tinh : " + this.getSex() + "\t subject : " + this.subject + "\t diem : " + this.getScore() + "\t ability : " + this.getAbility(this.getScore());
     }
-    
+
 }

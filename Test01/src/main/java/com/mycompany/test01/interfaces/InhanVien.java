@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.lesson04;
+package com.mycompany.test01.interfaces;
 
 /**
  *
  * @author doanxuanquyet
  */
-public class Main {
-    public static void main(String[] args) {
-        Menu.menu();
-    }
-    
+public interface InhanVien {
+
+    void inPut();
+
+    void outPut();
+
+    double tinhThuNhap();
 }

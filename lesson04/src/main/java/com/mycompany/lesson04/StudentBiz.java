@@ -62,6 +62,7 @@ public class StudentBiz extends Student {
 
     @Override
     public void inPut() {
+        this.setSex(Sex.inputSex());
         System.out.print("marketting score -->\t");
         this.marketting = new Scanner(System.in).nextDouble();
         System.out.print("sales score -->\t");

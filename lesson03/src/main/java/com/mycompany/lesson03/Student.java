@@ -63,7 +63,7 @@ public class Student {
     
     //xuat thong tin
     public void outPut(){
-        System.out.println(this.maSV + "\t" + this.name +  "\t" + Sex.getSex(this.sex));        
+        System.out.println(this.maSV + "\t" + this.name +  "\t" + this.sex.getMota());        
     }
 
 }

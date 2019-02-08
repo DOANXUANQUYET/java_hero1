@@ -6,99 +6,71 @@
 package com.mycompany.lesson04;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Scanner;
 
 /**
  *
  * @author doanxuanquyet
  */
-public class Menu {
+public final class Menu {
 
-    //function nhap list hoc sinh
-    public static void inPut(ArrayList<Student> list) {
-        if (list == null) {
-            System.out.println("Khong co du lieu");
-            return;
-        }
-        System.out.println("nhap danh sach hoc sinh [nhap end de ket thuc] : ");
-        while (true) {
-            System.out.print("name -->\t");
-            String nameW = new Scanner(System.in).nextLine();
-            //nhap end thi ket thuc
-            if (nameW.equals("end")) {
-                break;
-            }
-            //check nganh
-            System.out.print("subject [Information Technology or Marketting] -->\t");
-            String subjectW = new Scanner(System.in).nextLine();
-            //tao doi tuong StudentIT them vao list
-            switch (subjectW) {
-                case "Information Technology": {
-                    StudentIT st = new StudentIT();
-                    st.setName(nameW);
-                    st.setSubject(subjectW);
-                    st.inPut();
-                    list.add(st);
+    public final static void menu() {
+        ArrayList<Student> list = new ArrayList<>();
+        int mode;
+        boolean status = true;
+        while (status) {
+            System.out.print("Nhap che do [input : 0] [output : 1] [search(Hoc luc gioi) : 2] [search(Gioi tinh) : 3] [sort(score) : 4] [sort(name) : 5] [exit : 6]  -->\t");
+            mode = new Scanner(System.in).nextInt();
+            switch (mode) {
+                case 0:
+                    StudentManager.inPut(list);
                     break;
-                }
-                case "Marketting": {
-                    StudentBiz st = new StudentBiz();
-                    st.setName(nameW);
-                    st.setSubject(subjectW);
-                    st.inPut();
-                    list.add(st);
+                case 1:
+                    if (list.isEmpty()) {
+                        System.out.println("khong co du lieu");
+                    } else {
+                        StudentManager.outPut(list);
+                    }
                     break;
-                }
+                case 2:
+                    if (list.isEmpty()) {
+                        System.out.println("khong co du lieu");
+                    } else {
+                        StudentManager.outPutGoodStudent(list);
+                    }
+                    break;
+                case 3:
+                    if (list.isEmpty()) {
+                        System.out.println("khong co du lieu");
+                    } else {
+                        StudentManager.outPutStudentSex(list);
+                    }
+                    break;
+                case 4:
+                    if (list.isEmpty()) {
+                        System.out.println("khong co du lieu");
+                    } else {
+                        StudentManager.sortStudentScore(list);
+                        StudentManager.outPut(list);
+                    }
+                    break;
+                case 5:
+                    if (list.isEmpty()) {
+                        System.out.println("khong co du lieu");
+                    } else {
+                        StudentManager.sortStudentName(list);
+                        StudentManager.outPut(list);
+
+                    }
+                    break;
+                case 6:
+                    status = false;
+                    break;
                 default:
-                    System.out.println("subject not accepted!");
-                    break;
+                    System.out.println("Che do khong dung, xin nhap lai!");
             }
-
+            System.out.println("");
         }
-
-    }
-
-    //function xuat Danh Sach hoc sinh
-    public static void outPut(ArrayList<Student> list) {
-        if (list == null) {
-            System.err.println("Khong co du lieu");
-            return;
-        }
-        list.forEach((student) -> {
-            student.outPut();
-        });
-    }
-
-    //Xuat danh sach hoc sinh co hoc luc gioi
-    public static void outPutGoodStudent(ArrayList<Student> list) {
-        if (list != null) {
-            int cnt = 0;
-            for(Student student : list){
-                if (student.getAbility(student.getScore()).equals("gioi")) {
-                    student.outPut();
-                    cnt++;
-                }
-            }
-            if(cnt == 0){
-                System.out.println("Khong co hoc sinh xep loai gioi");
-            }
-        } else {
-            System.out.println("Khong co du lieu");
-        }
-    }
-    
-    //Sap xep nhan vien theo diem
-    public static void sortStudent(ArrayList<Student> list){
-        if(list == null){
-            System.out.println("Khong co du lieu");
-            return;
-        }
-        //khoi tao comparatopr so sanh diem
-        Comparator<Student> com = (Student o1, Student o2) -> o1.getScore() < o2.getScore()? 1 : -1;
-        Collections.sort(list,com);
-        System.out.println("Danh sach da duoc sap xep");
     }
 
 }
