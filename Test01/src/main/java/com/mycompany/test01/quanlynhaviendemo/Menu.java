@@ -23,11 +23,11 @@ public class Menu {
         int mode;
 
         while (run) {
+            System.out.println("");
             System.out.println("----------nhap che do:---------");
             System.out.println("[1 : nhap danh sach] [2 : xuat danh sach] [3 : tim nhan vien theo ma] [4 : tim nhan vien theo gioi tinh]");
             System.out.println("[5 : tim nhan vien theo khoang luong][6 : tim nhan vien theo chuc vu] [7: sap xep theo ten]");
             System.out.print("[8 : sap xep theo thu nhap] [9 : thoat] ----> ");
-            System.out.println("");
             mode = new Scanner(System.in).nextInt();
 
             switch (mode) {

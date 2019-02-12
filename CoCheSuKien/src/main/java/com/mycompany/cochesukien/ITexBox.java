@@ -9,16 +9,7 @@ package com.mycompany.cochesukien;
  *
  * @author doanxuanquyet
  */
-public class Main {
-
-    /**
-     *
-     * @param args
-     */
-    public static void main(String[] args) {
-        Myframe fr = new Myframe();
-        fr.nguoiDungAnNut("quyet 1234");
-        fr.nguoiDungGoPhim("kim 2345");
-    }
+public interface ITexBox {
+    void xuLyGoPhim(String consten);
     
 }

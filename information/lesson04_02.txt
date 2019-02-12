@@ -1,5 +1,7 @@
 Viết chương trình quản lí sản phẩm gồm có 3 loại sản phẩm: Sản phẩm số, sản phẩm nông nghiệp, sản phẩm công nghiệp. Mỗi loại sản phẩm đều có các thuộc tính giống và khác nhau, nhưng đều có các hàm sơ bản như sau:
+
 - Hàm inPut() để nhập dữ liệu, hàm display để nhận thông tin, hàm giá bản để cho biết giá bán của sản phẩm.
+
 - Sản phẩm Số có các thuộc tính : mã, tên sản phẩm, dung lượng, giá bán = dung lượng * 1000;
 
 -Sản phẩm công nghiệp có các thuộc tính: mã, tên sản phẩm, thời gian bảo hành, giá xuất xưởng, giá bán = giá xuất xưởng + thời gian bảo hành * 1000;

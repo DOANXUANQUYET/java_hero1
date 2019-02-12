@@ -3,22 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.cochesukien;
+package com.mycompany.lesson01_02;
+
+import com.mycompany.lesson01_02.quanlysanphamdemo.Menu;
+import com.mycompany.lesson01_02.sanphamdemo.SanPham;
+import java.util.ArrayList;
 
 /**
  *
  * @author doanxuanquyet
  */
 public class Main {
-
-    /**
-     *
-     * @param args
-     */
     public static void main(String[] args) {
-        Myframe fr = new Myframe();
-        fr.nguoiDungAnNut("quyet 1234");
-        fr.nguoiDungGoPhim("kim 2345");
+        ArrayList<SanPham> list = new ArrayList<>();
+        Menu.menu(list);
     }
-    
 }

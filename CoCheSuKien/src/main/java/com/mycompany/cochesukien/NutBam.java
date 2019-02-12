@@ -22,8 +22,8 @@ public class NutBam {
     }
 
     //duoc frame goi khi nut bi an va se chay 1 doan code nao do do lap trinh vien sau nay code
-    public void anNut() {
-        iXuLyAnNut.nutBiAn();
+    public void anNut(String consten) {
+        iXuLyAnNut.nutBiAn(consten);
 
     }
 

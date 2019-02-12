@@ -14,7 +14,7 @@ public class Tao1Class {
     private static Tao1Class tao1class;
     public String test;
 
-    private Tao1Class() {
+    Tao1Class() {
     }
 
     public static Tao1Class Tao1Class() {

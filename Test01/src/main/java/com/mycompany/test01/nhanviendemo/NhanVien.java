@@ -6,6 +6,7 @@
 package com.mycompany.test01.nhanviendemo;
 
 import com.mycompany.test01.interfaces.InhanVien;
+import com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException;
 import java.util.Scanner;
 
 /**
@@ -68,11 +69,17 @@ public abstract class NhanVien implements InhanVien {
     //can phai viet them cho tung loai nhan vien
     @Override
     public void inPut() {
+        try{
             System.out.print("name --> ");
             this.name = new Scanner(System.in).nextLine();
             this.gioitinh = GioiTinh.setGioiTinh();
             System.out.print("luong --> ");
             this.luong = new Scanner(System.in).nextDouble();
+        }catch(NumberFormatException e){
+            System.out.println("loi "+e);
+        }catch(Exception e){
+            System.out.println("loi " +e);
+        }
     }
 
     @Override

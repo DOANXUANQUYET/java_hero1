@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.cochesukien;
+package com.mycompany.lesson01_02.interfacedemo;
 
 /**
  *
  * @author doanxuanquyet
  */
-public interface IXuLyAnNut {
-    void nutBiAn(String consten);
-    
+public interface ISanPham {
+    void inPut();
+    void outPut();
+    float tinhGia();
 }
