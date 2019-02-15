@@ -1,0 +1,22 @@
+// chưa dùng interface
+
+tầng model:
+	tạo 1 class kết nối database;(classKetNoi)
+	tạo 1 class mô phỏng dữ liệu trong database; (classMoPhong)
+	tạo tầng DAO để tương tác giữa classMoPhong và classKetNoi;
+Tầng view:
+	tạo 1 class để tương tác với người dùng;(classNhapDuLieu)
+
+****
+run:
+
+	người dùng nhập dữ liệu qua classNhapDuLieu
+	classNhapDuLieu truyền dữ liệu cho classMoPhong
+	classMoPhong truyền dữ liệu cho classKetNoi
+	classKetNoi trả về kết quả cho classNhapDuLieu để hiển thị cho người dùng biết
+
+//thêm interface để chia code cho mọi nguời có thể thực hiện riêng từng phần
+
+	...
+
+
