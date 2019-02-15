@@ -1,0 +1,4 @@
+Bài tập 2:
+1. Xây dựng lớp có mã tự động tăng khi tạo đối tượng
+2. Xây dựng 1 lớp chỉ tạo được 1 đối tượng duy nhất
+3. Xây dựng 1 lớp chỉ tạo được 3 đối tượng

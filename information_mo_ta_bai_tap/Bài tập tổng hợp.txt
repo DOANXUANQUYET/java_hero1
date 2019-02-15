@@ -1,0 +1,17 @@
+Viết chương trình quản lí nhân sự:
+Có các loại nhân sự sau: Giám đốc,Quản lý,Công nhân. Các nhân sự đều có các thuộc tính:
+Mã,tên,giới tính,ngày sinh,lương,và hàm tính thu nhập. Tuy nhiên mỗi loại nhân sự lại có cách tính thu nhập khác nhau:
+	- Giám đốc: thu nhập = lương + doanh số
+	- Quản lý: thu nhập = lương + số nhân viên quản lý * hệ số
+	- Công nhân; thu nhập = lương + số ngày công * hệ số
+Yêu cầu: Xây dựng class: Quản lí nhân sự có các hàm quản lý và có hàm tính tổng thu nhập của danh sách nhân sự trong công ty;
+	1. nhập danh sách nhân sự (mã nhân viên tự tăng)
+	2. xuất danh sách nhân sự
+	3. tìm nhân viên theo chức vụ
+	4. tìm nhân viên theo giới tính
+	5. tìm nhân viên theo khoảng lương
+	6. tìm nhân viên theo mã [sửa thông tin]
+	7. sắp xếp theo tên
+	8. sắp xếp theo thu nhập
+	9. thoát
+	
