@@ -1,0 +1,22 @@
+Tầng model:
+	- class mô tả dữ liệu ở Database;(classMoTaModel)
+	- class kết nối với Database; (classConnect)
+	- class tương tác giữa ClassMoTaModel và classConnect;(classDAO)
+	- Interface IDAO(data access object) để định dạng các classDAO;
+Tầng control:
+	- class tương tác với View có dạng dữ liệu giống với classMoTa ở model;(classMoTaCtrl)
+	- class chuyển đổi dữ liệu từ classMoTaCtrol <-> classMoTaModel;(classMapping)
+	- Interface IMAP để định dạng các class mapping
+	- class tương tác giữa classMoTaCtrol <-> classMoTaModel;(classDTO)
+	- Interface IDTO để định dạng các class DTO;
+
+run: 
+	- dữ liệu do người dùng nhập từ View truyền vào classMoTaCtrl;
+	- trong classDTO{
+		classMoTaCtrl chuyển đổi dữ liệu thành classMoTaModel qua classMapping; trả về newClass01 đã chuyển đổi;
+		newClass01 sẽ thao tác với Database thông qua classDAO; tra ve newClass2;
+		newClass2 chuyển đổi dữ liệu về lại classMoTaCtrl qua classMapping;
+	}
+	- dữ liệu trả về thao tac với View để hiển thị cho người dùng;
+	
+	

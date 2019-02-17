@@ -3,25 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package demo_mvc.model;
+package demo_connect_db_02.control;
 
 /**
  *
  * @author doanxuanquyet
  */
-public class SanPham {
+public class SinhVienDTO extends MyDTO{
 
+    // chua du dai dien cho ben ngoai giao dien
     private int ma;
     private String ten;
-    private double gia;
+    private String ngaysinh;
 
-    public SanPham(int ma, String ten, double gia) {
-        this.ma = ma;
-        this.ten = ten;
-        this.gia = gia;
+    public SinhVienDTO() {
     }
 
-    public SanPham() {
+    public SinhVienDTO(int ma, String ten, String ngaysinh) {
+        this.ma = ma;
+        this.ten = ten;
+        this.ngaysinh = ngaysinh;
     }
 
     public int getMa() {
@@ -40,12 +41,12 @@ public class SanPham {
         this.ten = ten;
     }
 
-    public double getGia() {
-        return gia;
+    public String getNgaysinh() {
+        return ngaysinh;
     }
 
-    public void setGia(double gia) {
-        this.gia = gia;
+    public void setNgaysinh(String ngaysinh) {
+        this.ngaysinh = ngaysinh;
     }
 
 }

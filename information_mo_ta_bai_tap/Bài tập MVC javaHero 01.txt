@@ -1,0 +1,9 @@
+Xây dựng tầng Model và Controller của ứng dụng bao gồm các tính năng sau:
+- Ứng dụng quản lý lớp học. 1 lớp học có nhiều hocj sinh và 1 học sinh thuộc 1 lớp học.
+
+Yêu cầu sử dụng CSDL SQL xây dựng đầy đủ các tầng model,DTO,Controller
+
+Lớp học(ID,Ten)
+Học sinh(ID,Ten,Ngaysinh,GioiTinh,IDlop)
+	- Quản Lí lớp: CRUH lớp
+	- Quản trị học sinh : CRUD học sinh

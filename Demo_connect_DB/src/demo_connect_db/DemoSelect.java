@@ -50,8 +50,8 @@ public class DemoSelect {
             //ep kieu date cua java va truyen vao kieu date cua mysql
             pre.setDate(2, new Date(new java.util.Date().getTime()));
             //thuc thi cau lenh // dung executeNonQuery tra ve du lieu
-             set = pre.executeQuery();
-            while(set.next()){
+            set = pre.executeQuery();
+            while (set.next()) {
                 //get kieu du lieu va truyen vao ten cot hoac so thu tu cua cot
                 int maSv = set.getInt("ma");
                 String name = set.getString(2);
@@ -60,27 +60,34 @@ public class DemoSelect {
                 System.out.println(name);
                 System.out.println(date);
                 System.out.println("-------------------------------------");
-                
+
             }
 
-            
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(DemoUpdate.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
-                set.close();
+                //check null va trang thai closed
+
+                if (set != null && !set.isClosed()) {
+                    set.close();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                if (pre != null && !pre.isClosed()) {
+                    pre.close();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                if (cnn != null && !cnn.isClosed()) {
+                    cnn.close();
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(DemoSelect.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                pre.close();
-            } catch (SQLException ex) {
-                Logger.getLogger(DemoUpdate.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            try {
-                cnn.close();
-            } catch (SQLException ex) {
-                Logger.getLogger(DemoUpdate.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }

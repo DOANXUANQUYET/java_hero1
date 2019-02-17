@@ -21,7 +21,7 @@ public class OpenDB {
 
     //de public (nhung thong tin nay thuong save trong file text  khi dung thi doc len)
     public static final String USER = "pma";
-    public static final String PASS = "123345";
+    public static final String PASS = "12345";
     public static final String DRIVER = "com.mysql.jdbc.Driver";
     public static final String URL = "jdbc:mysql://localhost/java_hero";
 

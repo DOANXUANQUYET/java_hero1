@@ -3,25 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package demo_mvc;
-
-import demo_mvc.control.SanPhamDTO;
-import modelInterface.ISanPhamDTO;
+package bai_tap_mvc_java_hero_01.lam_bai;
 
 /**
  *
  * @author doanxuanquyet
  */
-public class Demo_MVC {
+public class BAI_TAP_MVC_JAVA_HERO_01LAM_BAI {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //nguoi dung nhap du lieu
-        ISanPhamDTO spDTO = new SanPhamDTO();
-        spDTO.hienDanhSach();
     }
     
 }

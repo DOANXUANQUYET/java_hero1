@@ -1,9 +1,11 @@
-// chưa dùng interface
+lever 1: // chưa dùng interface
 
 tầng model:
 	tạo 1 class kết nối database;(classKetNoi)
 	tạo 1 class mô phỏng dữ liệu trong database; (classMoPhong)
 	tạo tầng DAO để tương tác giữa classMoPhong và classKetNoi;
+Tầng control
+	tạo tầng DTO để tương tác giữa classNhapDuLieu và classMoPhong;
 Tầng view:
 	tạo 1 class để tương tác với người dùng;(classNhapDuLieu)
 
@@ -11,12 +13,14 @@ Tầng view:
 run:
 
 	người dùng nhập dữ liệu qua classNhapDuLieu
-	classNhapDuLieu truyền dữ liệu cho classMoPhong
-	classMoPhong truyền dữ liệu cho classKetNoi
+	classNhapDuLieu truyền dữ liệu qua tầng DTO
+	tầng DTO xử lí và truyền dữ liệu cho classKetNoi
 	classKetNoi trả về kết quả cho classNhapDuLieu để hiển thị cho người dùng biết
 
-//thêm interface để chia code cho mọi nguời có thể thực hiện riêng từng phần
-
+lever 2: //thêm interface để chia code cho mọi nguời có thể thực hiện riêng từng phần
 	...
 
+lever 3: // không dùng new mà dùng reflection, tách và lưu riêng tên class
+	...
+Lever 4: // dùng generic cho interface
 

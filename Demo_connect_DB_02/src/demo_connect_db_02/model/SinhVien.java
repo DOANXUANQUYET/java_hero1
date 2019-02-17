@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package demo_connect_db_02.control.model;
+package demo_connect_db_02.model;
 
 import java.sql.Date;
 
@@ -14,20 +14,17 @@ import java.sql.Date;
 public class SinhVien {
     
     private int ma;
-    private String name;
+    private String ten;
     private  Date ngaysinh;
 
     public SinhVien() {
     }
 
-    public SinhVien(int ma, String name, Date ngaysinh) {
+    public SinhVien(int ma, String ten, Date ngaysinh) {
         this.ma = ma;
-        this.name = name;
+        this.ten = ten;
         this.ngaysinh = ngaysinh;
     }
-    
-    
-    
 
     public int getMa() {
         return ma;
@@ -37,12 +34,12 @@ public class SinhVien {
         this.ma = ma;
     }
 
-    public String getName() {
-        return name;
+    public String getTen() {
+        return ten;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTen(String ten) {
+        this.ten = ten;
     }
 
     public Date getNgaysinh() {
@@ -52,6 +49,8 @@ public class SinhVien {
     public void setNgaysinh(Date ngaysinh) {
         this.ngaysinh = ngaysinh;
     }
+
+
     
     
 }

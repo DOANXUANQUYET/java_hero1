@@ -7,18 +7,24 @@ package demo_mvc.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import modelInterface.ISanPhamDAO;
+import modelInterface.SanPham;
 
 /**
  *
  * @author doanxuanquyet
  */
-public class SanPhamDAO {
+public class SanPhamDAO implements ISanPhamDAO<SanPham>{
 
     //lay du lieu san pham truyen vao database, tra ve sp da duoc them vao, neu k thanh cong tra ve null
-    public SanPham themMoi(SanPham sp) {
+    @Override
+    public SanPham addNew(SanPham sp) {
 
         Connection con = OpenDB.open();
         PreparedStatement ps = null;
@@ -44,5 +50,51 @@ public class SanPhamDAO {
         }
         return null;
     }
+
+    @Override
+    public SanPham updateByMa(SanPham sp) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public SanPham deleteByMa(SanPham sp) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public SanPham findMa(SanPham sp) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<SanPham> getAll() {
+        List<SanPham> listSp = new ArrayList<>();
+        Connection con = OpenDB.open();
+        PreparedStatement ps = null;
+        ResultSet ret = null;
+        if (con != null) {
+            try {
+                String sql = "SELECT * FROM `SanPham` WHERE 1";
+                ps = con.prepareStatement(sql);
+                //thuc hien lenh sql truy xuat du lieu dung executeQuery() tra ve du lieu kieu bang cua database
+                ret = ps.executeQuery();
+                while(ret.next()){
+                    int ma = ret.getInt("ma");
+                    String ten = ret.getString("ten");
+                    double gia = ret.getDouble("gia");
+                    listSp.add(new SanPham(ma,ten,gia));
+                }
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(SanPhamDAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            finally{
+                OpenDB.close(ret, ps, con);
+            }
+        }
+        return listSp;
+    }
+
+
 
 }

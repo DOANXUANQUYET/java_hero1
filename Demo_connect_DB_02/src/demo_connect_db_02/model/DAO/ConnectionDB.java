@@ -1,4 +1,4 @@
-package demo_connect_db_02.control;
+package demo_connect_db_02.model.DAO;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -26,6 +26,7 @@ public class ConnectionDB {
     private static final String USER = "pma";
     private static final String PASS = "12345";
     
+    //function ma ket noi tra ve connecttion java.sql
     public static  Connection connect(){
         try {
             Class.forName(DRIVER);
@@ -37,8 +38,12 @@ public class ConnectionDB {
         return null;
     }
     
+    
+    //function dong ket noi, nhan vao ResultSet,PreparedStatement,Connection
     public static void closeDB(ResultSet rs,PreparedStatement pr,Connection con){
         try {
+            //check null va trang thai closed
+            
             if(rs != null && !rs.isClosed()){
             rs.close();
             }

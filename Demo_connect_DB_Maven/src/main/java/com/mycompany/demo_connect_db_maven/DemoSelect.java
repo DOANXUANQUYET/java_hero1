@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package demo_connect_db;
+package com.mycompany.demo_connect_db_maven;
 
-import com.mysql.jdbc.PreparedStatement;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,7 +18,7 @@ import java.util.logging.Logger;
  *
  * @author doanxuanquyet
  */
-public class DemoUpdate {
+public class DemoSelect {
 
     /**
      * @param args the command line arguments
@@ -24,6 +26,7 @@ public class DemoUpdate {
     public static void main(String[] args) {
         Connection cnn = null;
         PreparedStatement pre = null;
+        ResultSet set = null;
 
         try {
             // TODO code application logic here
@@ -39,17 +42,34 @@ public class DemoUpdate {
             //ket noi voi mysql
             cnn = DriverManager.getConnection("jdbc:mysql://localhost/java_hero", "pma", "12345");
             //tao cau lenh sql
-            String sql = "INSERT INTO `java_hero`.`SinhVien` (`ten`, `ngaysinh`) VALUES ('Nguyen Van a', '2019-2-15');";
+            String sql = "select * from `java_hero`.`SinhVien` where 1;";
             //tao preparedStament (cau lenh chuan bi)
             pre = (PreparedStatement) cnn.prepareStatement(sql);
-            //thuc thi cau lenh // dung executeUpdate tra ve so dong bi tuong tac
-            int cnt = pre.executeUpdate();
-            if (cnt > 0) {
-                System.out.println("connected succes");
+            set = pre.executeQuery();
+            while (set.next()) {
+                //get kieu du lieu va truyen vao ten cot hoac so thu tu cua cot
+                int maSv = set.getInt("ma");
+                String name = set.getString(2);
+                Date date = set.getDate("ngaysinh");
+                System.out.println(maSv);
+                System.out.println(name);
+                System.out.println(date);
+                System.out.println("-------------------------------------");
+
             }
+
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(DemoUpdate.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DemoSelect.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
+            try {
+                //check null va trang thai closed
+
+                if (set != null && !set.isClosed()) {
+                    set.close();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, ex);
+            }
             try {
                 if (pre != null && !pre.isClosed()) {
                     pre.close();
@@ -66,5 +86,4 @@ public class DemoUpdate {
             }
         }
     }
-
 }
