@@ -95,12 +95,10 @@ public class StudentManager {
         //nhap gioi tinh muon tim
         Sex sexW = Sex.inputSex();
         int cnt = 0;
-        for (Student student : list) {
-            if (student.getSex() == sexW) {
-                student.outPut();
-                cnt++;
-            }
-        }
+        cnt = list.stream().filter((student) -> (student.getSex() == sexW)).map((student) -> {
+            student.outPut();
+            return student;
+        }).map((_item) -> 1).reduce(cnt, Integer::sum);
         if (cnt == 0) {
             System.out.println("Khong co hoc sinh xep loai gioi");
         }
