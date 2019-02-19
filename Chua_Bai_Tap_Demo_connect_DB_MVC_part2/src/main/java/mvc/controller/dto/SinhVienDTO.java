@@ -68,4 +68,10 @@ public class SinhVienDTO {
         this.lopHoc = lopHoc;
     }
 
+    @Override
+    public String toString() {
+        return "SinhVienDTO{" + "ma=" + ma + ", ten=" + ten + ", ngaySinh=" + ngaySinh + ", gioiTinh=" + gioiTinh + ", lopHoc=" + lopHoc + '}';
+    }
+
+    
 }

@@ -38,4 +38,10 @@ public class LopHocDTO {
         this.ten = ten;
     }
 
+    @Override
+    public String toString() {
+        return "LopHocDTO{" + "ma=" + ma + ", ten=" + ten + '}';
+    }
+
+    
 }
