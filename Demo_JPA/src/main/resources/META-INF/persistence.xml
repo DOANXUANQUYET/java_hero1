@@ -7,7 +7,7 @@
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/java_hero?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="pma"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="12345"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
     </properties>
   </persistence-unit>
 </persistence>

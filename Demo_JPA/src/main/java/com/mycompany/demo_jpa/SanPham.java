@@ -14,6 +14,10 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 /**
  *
  * @author doanxuanquyet
@@ -35,6 +39,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "SanPham.findByMa", query = "SELECT s FROM SanPham s WHERE s.ma = :ma")
     , @NamedQuery(name = "SanPham.findByTen", query = "SELECT s FROM SanPham s WHERE s.ten LIKE :ten")
     , @NamedQuery(name = "SanPham.findByGia", query = "SELECT s FROM SanPham s WHERE s.gia = :gia")})
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class SanPham implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -54,64 +59,64 @@ public class SanPham implements Serializable {
     @Column(nullable = false)
     private double gia;
 
-    public SanPham() {
-    }
-
-    public SanPham(Integer ma) {
-        this.ma = ma;
-    }
-
-    public SanPham(Integer ma, String ten, double gia) {
-        this.ma = ma;
-        this.ten = ten;
-        this.gia = gia;
-    }
-
-    public Integer getMa() {
-        return ma;
-    }
-
-    public void setMa(Integer ma) {
-        this.ma = ma;
-    }
-
-    public String getTen() {
-        return ten;
-    }
-
-    public void setTen(String ten) {
-        this.ten = ten;
-    }
-
-    public double getGia() {
-        return gia;
-    }
-
-    public void setGia(double gia) {
-        this.gia = gia;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (ma != null ? ma.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof SanPham)) {
-            return false;
-        }
-        SanPham other = (SanPham) object;
-        return !((this.ma == null && other.ma != null) || (this.ma != null && !this.ma.equals(other.ma)));
-    }
-
-    @Override
-    public String toString() {
-        return "SanPham{" + "ma=" + ma + ", ten=" + ten + ", gia=" + gia + '}';
-    }
+//    public SanPham() {
+//    }
+//
+//    public SanPham(Integer ma) {
+//        this.ma = ma;
+//    }
+//
+//    public SanPham(Integer ma, String ten, double gia) {
+//        this.ma = ma;
+//        this.ten = ten;
+//        this.gia = gia;
+//    }
+//
+//    public Integer getMa() {
+//        return ma;
+//    }
+//
+//    public void setMa(Integer ma) {
+//        this.ma = ma;
+//    }
+//
+//    public String getTen() {
+//        return ten;
+//    }
+//
+//    public void setTen(String ten) {
+//        this.ten = ten;
+//    }
+//
+//    public double getGia() {
+//        return gia;
+//    }
+//
+//    public void setGia(double gia) {
+//        this.gia = gia;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int hash = 0;
+//        hash += (ma != null ? ma.hashCode() : 0);
+//        return hash;
+//    }
+//
+//    @Override
+//    public boolean equals(Object object) {
+//        // TODO: Warning - this method won't work in the case the id fields are not set
+//        if (!(object instanceof SanPham)) {
+//            return false;
+//        }
+//        SanPham other = (SanPham) object;
+//        return !((this.ma == null && other.ma != null) || (this.ma != null && !this.ma.equals(other.ma)));
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "SanPham{" + "ma=" + ma + ", ten=" + ten + ", gia=" + gia + '}';
+//    }
 
     
     

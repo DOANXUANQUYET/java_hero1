@@ -1,0 +1,8 @@
+$ cd my-app
+
+my-app$ mvn package
+
+// check main.class  ->project-right_click->run->main
+
+my-app$ java -cp target/[project_name]-1.0-SNAPSHOT.jar com.mycompany.[package_name].[main_name] 
+
