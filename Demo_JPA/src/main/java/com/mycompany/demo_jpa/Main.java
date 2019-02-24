@@ -49,6 +49,8 @@ public class Main {
         //gom nhieu cau lenh thanh 1 khoi lenh, tat ca ok thi moi thuc hien, khi 1 cau lenh loi thi tat ca huy bo
 
         //dung Query nhu cau lenh SQL,nhung hoi khac mot ti xiu, tra ve 1 bien Query
+        
+       // Query cQuery = em.createQuery("SELECT s FROM SanPham s ",them jieu du lieutra ve);
         Query cQuery = em.createQuery("SELECT s FROM SanPham s ");
         List<SanPham> list = cQuery.getResultList(); //tra va kieu list
         list.forEach((t) -> {
