@@ -27,4 +27,5 @@ public interface SinhVienMapper {
     
     //cai ham cua minh
     SinhVienDTO toDTO(SinhVien sv);
+    
 }

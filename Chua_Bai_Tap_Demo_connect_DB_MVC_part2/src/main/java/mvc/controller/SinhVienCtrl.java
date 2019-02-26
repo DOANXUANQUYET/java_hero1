@@ -68,7 +68,8 @@ public class SinhVienCtrl implements IController<SinhVienDTO, Integer> {
         //lay danh sach sinh vien tu co so du lieu
         List<SinhVien> listSinhVien = sinhVienDAO.getAll();
 
-        List<SinhVienDTO> collect = listSinhVien.stream()
+        List<SinhVienDTO> collect;
+        collect = listSinhVien.stream()
                 //map thao tac truc tiep voi tung phan tu trong stream
                 //convert sinhvien thanh sinhvienDTO
                 //map truyen class sinhvien vao va goi EntitytoDTO() trong sinhvienMapping;

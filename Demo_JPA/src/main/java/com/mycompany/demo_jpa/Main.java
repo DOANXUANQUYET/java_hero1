@@ -38,14 +38,14 @@ public class Main {
         //function find(entityClass, primary key) truyen vao ten entity va khoa chinh
         //tuong duong voi ham find - tim kiem theo ID
         SanPham retSp = em.find(SanPham.class, 1);
-        retSp.setTen("quyet dep trai");
+        //retSp.setTen("quyet dep trai");
 
         //function merge(truyen vao entity) tuong tu ham update
         //---------- merge(sp);
         //sau khi thuc hien merge(entity) phai goi lenh [EntityManager.getTransaction().commit();
-        em.getTransaction().begin();
+       // em.getTransaction().begin();
         // em.merge(retSp);
-        em.getTransaction().commit();
+        //em.getTransaction().commit();
         //gom nhieu cau lenh thanh 1 khoi lenh, tat ca ok thi moi thuc hien, khi 1 cau lenh loi thi tat ca huy bo
 
         //dung Query nhu cau lenh SQL,nhung hoi khac mot ti xiu, tra ve 1 bien Query
