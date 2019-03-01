@@ -1,5 +1,0 @@
-Tạo chương trình có 3 theard:
-- theard a sinh ra một số a ngẫu nhiên,
-- theard sinh ra một số b ngẫu nhiên,
-- theard c tinh tổng a + b
-- nếu có thể thì làm đồng bộ không thì làm như bình thường, mỗi theard in 1 tram số

@@ -1,8 +1,0 @@
-Entity/exceptions/PreexistingEntityException.class
-controller/LopHocJpaController.class
-Entity/exceptions/IllegalOrphanException.class
-Entity/exceptions/NonexistentEntityException.class
-Entity/SinhVien.class
-Entity/LopHoc.class
-com/mycompany/demo_jpa_02/Main.class
-controller/SinhVienJpaController.class
