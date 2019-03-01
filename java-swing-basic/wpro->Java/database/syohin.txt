@@ -1,0 +1,31 @@
+USE [18jnxxxx]
+GO
+
+
+CREATE TABLE [dbo].[Syohin](
+	[SyohinCode] [char](50)  NOT NULL,
+	[SyohinName] [nvarchar](50) NOT NULL,
+	[Price] [int] NOT NULL,
+	[BunruiNo] [int] NOT NULL,
+ CONSTRAINT [PK_SyohinCode] PRIMARY KEY CLUSTERED 
+(
+	[SyohinCode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+Insert Into Syohin Values('A0001','冷蔵庫 110L',21700,1);
+Insert Into Syohin Values('A0002','ドラム式洗濯乾燥機 7kg',157600,1);
+Insert Into Syohin Values('A0003','サイクロン掃除機(小型)',18000,1);
+Insert Into Syohin Values('A0004','ワイドオーブンレンジ',20300,1);
+Insert Into Syohin Values('A0005','エアコン(省エネタイプ)6畳',59400,1);
+Insert Into Syohin Values('A0006','マッサージチェア',328000,1);
+Insert Into Syohin Values('B0001','40V型 液晶テレビ',56000,2);
+Insert Into Syohin Values('B0002','ブルーレイ・DVDレコーダー',45800,2);
+Insert Into Syohin Values('B0003','ワイヤレスヘッドホン',26250,2);
+Insert Into Syohin Values('B0004','デジタル プロジェクター',154800,2);
+Insert Into Syohin Values('C0001','ノートPC 11.6型 ワイド液晶',149800,3);
+Insert Into Syohin Values('C0002','液晶一体型デスクトップパソコン',97800,3);
+Insert Into Syohin Values('C0003','インクジェット複合機',16800,3);
+Insert Into Syohin Values('C0004','外付けハードディスク 2TB',11800,3);

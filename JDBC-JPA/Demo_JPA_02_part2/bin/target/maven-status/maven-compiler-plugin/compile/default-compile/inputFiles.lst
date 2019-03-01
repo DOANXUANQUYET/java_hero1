@@ -1,0 +1,8 @@
+/Users/doanxuanquyet/Desktop/java_hero/java_hero1/Demo_JPA_02/src/main/java/Entity/SinhVien.java
+/Users/doanxuanquyet/Desktop/java_hero/java_hero1/Demo_JPA_02/src/main/java/Entity/LopHoc.java
+/Users/doanxuanquyet/Desktop/java_hero/java_hero1/Demo_JPA_02/src/main/java/controller/SinhVienJpaController.java
+/Users/doanxuanquyet/Desktop/java_hero/java_hero1/Demo_JPA_02/src/main/java/controller/LopHocJpaController.java
+/Users/doanxuanquyet/Desktop/java_hero/java_hero1/Demo_JPA_02/src/main/java/com/mycompany/demo_jpa_02/Main.java
+/Users/doanxuanquyet/Desktop/java_hero/java_hero1/Demo_JPA_02/src/main/java/Entity/exceptions/NonexistentEntityException.java
+/Users/doanxuanquyet/Desktop/java_hero/java_hero1/Demo_JPA_02/src/main/java/Entity/exceptions/IllegalOrphanException.java
+/Users/doanxuanquyet/Desktop/java_hero/java_hero1/Demo_JPA_02/src/main/java/Entity/exceptions/PreexistingEntityException.java

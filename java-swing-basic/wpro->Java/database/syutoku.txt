@@ -1,0 +1,48 @@
+USE [18jnxxxx]
+GO
+
+
+CREATE TABLE [dbo].[Syutoku](
+	[SyainNo] [char](4) NOT NULL,
+	[ShikakuNo] [int] NOT NULL,
+	[SyutokuDate] [date] NOT NULL,
+ CONSTRAINT [PK_Syutoku] PRIMARY KEY CLUSTERED 
+(
+	[SyainNo] ASC,
+	[ShikakuNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+Insert into Syutoku Values('1002',4,'1998-07-28');
+Insert into Syutoku Values('1003',4,'1997-07-30');
+Insert into Syutoku Values('1003',5,'1998-12-22');
+Insert into Syutoku Values('1005',3,'2000-07-25');
+Insert into Syutoku Values('1006',1,'2012-01-20');
+Insert into Syutoku Values('1007',2,'2002-11-18');
+Insert into Syutoku Values('1009',2,'2002-11-18');
+Insert into Syutoku Values('1010',3,'2000-07-25');
+Insert into Syutoku Values('1010',4,'2002-07-22');
+Insert into Syutoku Values('1010',5,'2006-12-21');
+Insert into Syutoku Values('1013',1,'2012-08-10');
+Insert into Syutoku Values('1014',2,'2005-06-25');
+Insert into Syutoku Values('1016',2,'2004-11-19');
+Insert into Syutoku Values('1016',3,'2006-12-21');
+Insert into Syutoku Values('1018',1,'2012-10-20');
+Insert into Syutoku Values('1019',1,'2012-01-30');
+Insert into Syutoku Values('1020',2,'2002-11-18');
+Insert into Syutoku Values('1022',2,'2002-11-18');
+Insert into Syutoku Values('1023',3,'2002-12-20');
+Insert into Syutoku Values('1023',5,'2005-12-18');
+Insert into Syutoku Values('1025',1,'2013-02-15');
+Insert into Syutoku Values('1026',1,'2013-03-01');
+Insert into Syutoku Values('1026',2,'2012-11-18');
+Insert into Syutoku Values('1026',3,'2013-06-21');
+Insert into Syutoku Values('1029',2,'2007-11-20');
+Insert into Syutoku Values('1029',3,'2010-06-15');
+Insert into Syutoku Values('1031',2,'2009-11-23');
+Insert into Syutoku Values('1032',2,'2010-05-20');
+Insert into Syutoku Values('1032',3,'2011-12-20');
+Insert into Syutoku Values('1034',1,'2012-04-30');
+Insert into Syutoku Values('1035',1,'2013-05-01');

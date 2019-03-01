@@ -1,0 +1,11 @@
+Bài tập:
+	tạo chức năng đếm số người online vaf đếm số lượt truy cập ,hiện ra trên client:
+	+ một người onlie sẽ chạy event sessioCreate
+	+ một người k onlie chạy event destroy, trừ đi 1
+	+ biến lưu vào context
+	+mỗi khi chạy web gọi event contextCreate = 0;
+Xây đựng ứng dụng phân quyền gồm các chức năng:
++login,logout, khi user login vào có quyền admin,staff.
+-nếu quyền admin vào link nào cũng ok
+-staff không được vào các link có /admin/...
+-Nếu staff cố tình vào link admin sẽ bị đẩy ra ngoài trang khác, thông báo không có quyền ..v..v.v.

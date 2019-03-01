@@ -1,0 +1,20 @@
+USE [18jnxxxx]
+GO
+
+
+CREATE TABLE [dbo].[Bunrui](
+	[BunruiNo] [int] NOT NULL,
+	[BunruiName] [nvarchar](50) NOT NULL
+	
+
+ CONSTRAINT [PK_Bunrui] PRIMARY KEY CLUSTERED 
+(
+	[BunruiNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+Insert Into Bunrui Values(1,'家電・ホーム用品');
+Insert Into Bunrui Values(2,'AV機器');
+Insert Into Bunrui Values(3,'周辺機器');

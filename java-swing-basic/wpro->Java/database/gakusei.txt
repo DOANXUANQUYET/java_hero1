@@ -1,0 +1,42 @@
+USE [17jnxxxx]
+GO
+
+
+CREATE TABLE [dbo].[Gakusei](
+	[GakuNo] [char](8) NOT NULL,
+	[GakuName] [nvarchar](50) NOT NULL,
+	[MailAddress] [varchar](max) NULL,
+	[Zaiseki] [bit] NOT NULL,
+ CONSTRAINT [PK_Gakusei] PRIMARY KEY CLUSTERED 
+(
+	[GakuNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+Insert Into Gakusei Values('14JZ0001','金子　賢一','14jz0001@jec.ac.jp',True);
+Insert Into Gakusei Values('14JZ0002','宮沢　智郎','14jz0002@jec.ac.jp',True);
+Insert Into Gakusei Values('14JZ0003','柳田　裕明','14jz0003@jec.ac.jp',True);
+Insert Into Gakusei Values('14JZ0004','山本　智也','14jz0004@jec.ac.jp',True);
+Insert Into Gakusei Values('14JZ0005','木内　達也','14jz0005@jec.ac.jp',True);
+Insert Into Gakusei Values('15JN0001','長谷川　淑','15jn0001@jec.ac.jp',True);
+Insert Into Gakusei Values('15JN0002','石井　利典','15jn0002@jec.ac.jp',True);
+Insert Into Gakusei Values('15JN0003','小島　徹','15jn0003@jec.ac.jp',True);
+Insert Into Gakusei Values('15JN0004','岡本　翼','15jn0004@jec.ac.jp',True);
+Insert Into Gakusei Values('15JN0005','足立　雅俊','15jn0005@jec.ac.jp',True);
+Insert Into Gakusei Values('15JZ0001','遠藤　遼','15jz0001@jec.ac.jp',True);
+Insert Into Gakusei Values('15JZ0002','藤野　静香','15jz0002@jec.ac.jp',True);
+Insert Into Gakusei Values('15JZ0003','関口　綾','15jz0003@jec.ac.jp',True);
+Insert Into Gakusei Values('15JZ0004','金井　駿介','15jz0004@jec.ac.jp',True);
+Insert Into Gakusei Values('15JZ0005','三原　結香','15jz0005@jec.ac.jp',True);
+Insert Into Gakusei Values('16JN0001','内田　貴裕','16jn0001@jec.ac.jp',True);
+Insert Into Gakusei Values('16JN0002','坂本　貴幸','16jn0002@jec.ac.jp',True);
+Insert Into Gakusei Values('16JN0003','堺　良昌','16jn0003@jec.ac.jp',True);
+Insert Into Gakusei Values('16JN0004','高橋　悟','16jn0004@jec.ac.jp',True);
+Insert Into Gakusei Values('16JN0005','木村　俊彦','16jn0005@jec.ac.jp',True);
+Insert Into Gakusei Values('16JZ0001','古屋　広樹','16jz0001@jec.ac.jp',True);
+Insert Into Gakusei Values('16JZ0002','佐野　幸絵','16jz0002@jec.ac.jp',True);
+Insert Into Gakusei Values('16JZ0003','坂井　翔','16jz0003@jec.ac.jp',True);
+Insert Into Gakusei Values('16JZ0004','岡田　亮','16jz0004@jec.ac.jp',True);
+Insert Into Gakusei Values('16JZ0005','三井　颯','16jz0005@jec.ac.jp',True);

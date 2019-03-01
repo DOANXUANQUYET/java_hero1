@@ -1,0 +1,7 @@
+Mô tả sử dụng fillter thay đổi dữ liệu request:
+->request chạy qua hàm doFillter:
+->Sau đó request được xử lí qua HttpServletRequestWrapper:
++covert lại hàm getParameter
++xử lí dữ liệu trả về
++tạo đối tượng HttpServletRequestWrapper đã thay đổi bên trong hàm doFillter
+-> cho request chạy qua Wrapper, dữ liệu sẽ thay đổi

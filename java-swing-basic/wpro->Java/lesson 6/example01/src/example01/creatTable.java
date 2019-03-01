@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package example01;
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+/**
+ *
+ * @author doanxuanquyet
+ */
+public class creatTable {
+
+
+public static class JTableCreatingDemo {
+    
+  public static void main(String args[]) {
+    JFrame frame = new JFrame();
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    Object rowData[][] = { { "Row1-Column1", "quyet", "Row1-Column3" },
+        { "Row2-Column1", "Row2-Column2", "Row2-Column3" } };
+    Object columnNames[] = { "Column One", "Column Two", "test1" };
+    JTable table = new JTable(rowData, columnNames);
+
+    JScrollPane scrollPane = new JScrollPane(table);
+    frame.add(scrollPane, BorderLayout.CENTER);
+    frame.setSize(300, 150);
+    frame.setVisible(true);
+
+  }
+    
+}
+}

@@ -1,0 +1,21 @@
+USE [18jnxxxx]
+GO
+
+
+CREATE TABLE [dbo].[Shikaku](
+	[ShikakuNo] [int] NOT NULL,
+	[ShikakuName] [nvarchar](50) NOT NULL,
+	[Teate] [int] NOT NULL,
+ CONSTRAINT [PK_Shikaku] PRIMARY KEY CLUSTERED 
+(
+	[ShikakuNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+Insert Into Shikaku Values(1,'ITパスポート',2000);
+Insert Into Shikaku Values(2,'基本情報技術者',5000);
+Insert Into Shikaku Values(3,'応用情報技術者',8000);
+Insert Into Shikaku Values(4,'データベーススペシャリスト',10000);
+Insert Into Shikaku Values(5,'ネットワークスペシャリスト',10000);

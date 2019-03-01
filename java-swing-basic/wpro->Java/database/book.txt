@@ -1,0 +1,54 @@
+USE [17jnxxxx]
+GO
+
+CREATE TABLE [dbo].[Book](
+	[Isbn] [varchar](20) NOT NULL,
+	[Title] [nvarchar](max) NOT NULL,
+	[Writer] [nvarchar](50) NOT NULL,
+	[Publisher] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Book] PRIMARY KEY CLUSTERED 
+(
+	[Isbn] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+Insert Into Book Values('978-4000103435','アルゴリズムとデータ構造','石畑 清','岩波書店');
+Insert Into Book Values('978-4053034656','1時間でハングルが読めるようになる本','チョ・ヒチョル','学研マーケティング');
+Insert Into Book Values('978-4054052758','日本１００名城に行こう　公式スタンプ帳つき','日本城郭協会','学研パブリッシング');
+Insert Into Book Values('978-4062764520','空飛ぶタイヤ(上)','池井戸 潤','講談社 ');
+Insert Into Book Values('978-4062764537','空飛ぶタイヤ(下)','池井戸 潤','講談社 ');
+Insert Into Book Values('978-4101349220','きみの友だち','重松 清','新潮社');
+Insert Into Book Values('978-4150795559','静寂の叫び〈上〉 ','ジェフリー ディーヴァー','早川書房');
+Insert Into Book Values('978-4150795566','静寂の叫び〈下〉','ジェフリー ディーヴァー','早川書房');
+Insert Into Book Values('978-4163763804','アップル帝国の正体','後藤 直義, 森川 潤','文藝春秋');
+Insert Into Book Values('978-4274068768','マスタリングTCP/IP 入門編','竹下 隆史他','オーム社');
+Insert Into Book Values('978-4274202179','情報セキュリティ標準テキスト','情報セキュリティ標準テキスト編集委員会','オーム社');
+Insert Into Book Values('978-4334927769','舟を編む','三浦 しをん','光文社');
+Insert Into Book Values('978-4344420557','清須会議','三谷 幸喜','幻冬舎');
+Insert Into Book Values('978-4478022214','統計学が最強の学問である','統計学が最強の学問である','ダイヤモンド社');
+Insert Into Book Values('978-4526064883','太陽光発電システムの不具合事例ファイル―PVRessQ!からの現地調査報告','加藤 和彦','日刊工業新聞社');
+Insert Into Book Values('978-4528017788','みるみる歌が上手くなる 魔法のボイストレーニング ','後藤 友輔','日東書院本社');
+Insert Into Book Values('978-4532168384','社長のテスト','山崎 将志','日本経済新聞出版社');
+Insert Into Book Values('978-4774116303','かんたんプログラミング VisualBasic.NET 基礎編','川口 輝久','技術評論社');
+Insert Into Book Values('978-4774153681','デザインの学校 これからはじめるPhotoshopの本','I&D, 宮川 千春, 木俣 カイ, ロクナナワークショップ 監修','技術評論社');
+Insert Into Book Values('978-4797327922','新版 明解C言語 入門編','柴田望洋','ソフトバンククリエイティブ');
+Insert Into Book Values('978-4797368277','詳解 Objective-C 2.0','荻原 剛志','ソフトバンククリエイティブ');
+Insert Into Book Values('978-4797369601','自分で作れる! おしゃれなWebサイト','久松 慎一','ソフトバンククリエイティブ');
+Insert Into Book Values('978-4797372960','スラスラわかるHTML&CSSのきほん','狩野 祐東','ソフトバンククリエイティブ');
+Insert Into Book Values('978-4798024035','わかりやすいJava入門編','川場 隆','秀和システム');
+Insert Into Book Values('978-4798035352','ポケット図解 最新消費税がよーくわかる本','奥村 佳史','秀和システム');
+Insert Into Book Values('978-4798122083','Excel VBA 逆引き辞典パーフェクト','田中 亨','翔泳社 ');
+Insert Into Book Values('978-4798124704','達人に学ぶDB設計 徹底指南書 初級者で終わりたくないあなたへ','ミック','翔泳社');
+Insert Into Book Values('978-4798126258','HTTPの教科書','上野 宣','翔泳社');
+Insert Into Book Values('978-4798128023','プログラマのためのSQL','ジョー・セルコ, Joe Celko','翔泳社');
+Insert Into Book Values('978-4809410000','サッカー「観戦力」が高まる','清水 英斗','東邦出版');
+Insert Into Book Values('978-4819112192','国民の憲法','産経新聞社','産経新聞出版');
+Insert Into Book Values('978-4822285081','3週間完全マスター ネットワークスペシャリスト','Gene, 小林洋之, 松田千賀','日経BP社');
+Insert Into Book Values('978-4844330868','スッキリわかるJava入門','中山 清喬, 国本 大悟','インプレスジャパン');
+Insert Into Book Values('978-4844331278','本格アプリを作ろう！ Androidプログラミングレシピ ','Dave Smith他','インプレスジャパン');
+Insert Into Book Values('978-4844998853','10日で合格るぞ!日商簿記3級 光速マスターテキスト','東京リーガルマインド LEC総合研究所 日商簿記試験部','東京リーガルマインド ');
+Insert Into Book Values('978-4861996115','死ぬまでに行きたい! 世界の絶景','詩歩','三才ブックス');
+Insert Into Book Values('978-4877710781','仕事は楽しいかね?','デイル ドーテン','きこ書房');
+Insert Into Book Values('978-4887244528','ボトムアップ式 映画英語のリスニング 新装版―NewYork Detective Story','森田 勝之','ディーエイチシー');
