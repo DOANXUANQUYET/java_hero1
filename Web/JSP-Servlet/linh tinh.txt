@@ -1,0 +1,9 @@
+servlet:
+	- code java thuần
+	- xử lí tính toán, xử lí dữ liệu với database, với các tầng khác trong project
+	- bảo mật, phân quyền
+	- xử lí chuyển trang
+
+* xu li dang nhap:
+	- kiem tra tren client voi javascript de bao cho nguoi dung
+	- kiem tra tren sever
